@@ -5,46 +5,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpenJOS - Concept</title>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #FFFFFF;
-        color: #4A6B8A;
+        font-family: 'Inter', sans-serif;
+        background-color: #e8e6e1;
+        background-image: 
+            radial-gradient(circle at 50% 50%, rgba(255,255,255,0.4) 0%, rgba(232, 230, 225, 0) 100%),
+            linear-gradient(180deg, #d6d3cc 0%, #e8e6e1 100%);
+        color: #3e3c39;
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: 100vh;
     }
+
     nav {
         width: 100%;
-        background-color: #D9D9D9;
+        background-color: rgba(217, 217, 217, 0.4);
+        backdrop-filter: blur(10px);
         display: flex;
         justify-content: center;
-        padding: 15px 0;
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(74, 107, 138, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
+
     nav a {
         color: #4A6B8A;
         text-decoration: none;
-        margin: 0 20px;
-        font-weight: bold;
-        font-size: 16px;
+        margin: 0 25px;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.4s ease;
     }
+
     nav a:hover {
-        opacity: 0.8;
+        color: #5c6e58;
+        letter-spacing: 4px;
     }
+
     h1 {
-        font-size: 48px;
-        margin: 40px 0 20px 0;
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        font-weight: 400;
+        font-style: italic;
+        color: #2c3e50;
+        margin: 60px 0 40px 0;
+        opacity: 0.9;
     }
+
     .content {
-        max-width: 850px;
-        text-align: center;
+        max-width: 750px;
+        width: 90%;
+        text-align: justify;
         font-size: 18px;
-        line-height: 1.8;
-        margin-bottom: 50px;
+        line-height: 2;
+        margin-bottom: 100px;
+        font-weight: 300;
+        color: #4f4c48;
     }
+
     .content p {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    /* Decoración sutil para párrafos específicos */
+    .content p:first-of-type::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        float: left;
+        line-height: 1;
+        margin-right: 10px;
+        color: #4A6B8A;
+        font-style: italic;
+    }
+
+    .content p:nth-of-type(4) {
+        font-style: italic;
+        border-left: 2px solid #5c6e58;
+        padding-left: 30px;
+        color: #5c6e58;
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 42px; }
+        .content { font-size: 16px; text-align: left; }
     }
 </style>
 </head>
