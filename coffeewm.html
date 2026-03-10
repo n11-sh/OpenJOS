@@ -50,13 +50,25 @@
         letter-spacing: 4px;
     }
 
+    .logo {
+        margin-top: 80px;
+        width: 160px;
+        height: auto;
+        filter: sepia(20%) contrast(90%) brightness(110%);
+        transition: transform 0.8s ease-in-out;
+    }
+    
+    .logo:hover {
+        transform: rotate(5deg) scale(1.05);
+    }
+
     h1 {
         font-family: 'Playfair Display', serif;
         font-size: 56px;
         font-weight: 400;
         font-style: italic;
         color: #2c3e50;
-        margin: 60px 0 40px 0;
+        margin: 30px 0 40px 0;
         opacity: 0.9;
     }
 
@@ -96,6 +108,7 @@
     @media (max-width: 600px) {
         h1 { font-size: 42px; }
         .content { font-size: 16px; text-align: left; }
+        nav a { margin: 0 10px; font-size: 12px; }
     }
 </style>
 </head>
@@ -108,6 +121,8 @@
     <a href="news.html">News</a>
     <a href="devs.html">Devs</a>
 </nav>
+
+<img src="coffeewmlogo.png" alt="Coffee WM Logo" class="logo">
 
 <h1>Coffee WM</h1>
 
